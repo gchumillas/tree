@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.build.json",
+
+  "compilerOptions": {
+    // `paths` is relative to `baseURL`, specified in every project and package
+    "paths": {
+      "@plastic-ui/tree": ["../lib/src"]
+    },
+    "jsx": "react",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "types": []
+  }
+}
