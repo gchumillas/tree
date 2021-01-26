@@ -1,47 +1,75 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { CssBaseline, Container, Paper } from '@material-ui/core'
-import { Tree } from '@plastic-ui/tree'
+import {
+  Dns as DnsIcon,
+  People as UserIcon,
+  Settings as SettingsIcon,
+  Subject as TemplateIcon,
+  LockOpen as LockOpenIcon,
+  PowerSettingsNew as RemoveAccountIcon,
+  LocalOffer as TagIcon
+} from '@material-ui/icons'
+import { TagsIcon } from './icons'
+import { Tree, TreeItem } from '@plastic-ui/tree'
 
 const App = () => {
-  const items = [
+  const items: TreeItem[] = [
     {
-      id: '1',
-      name: 'Item 1',
+      id: '/domains',
+      name: 'Domains',
       items: [
         {
-          id: '11',
-          name: 'Item 11',
-          items: [
-            {
-              id: '111',
-              name: 'Item 111',
-              items: []
-            }
-          ]
+          id: '/tags/1/domains',
+          name: 'Tag 1',
+          icon: <TagIcon />
         },
         {
-          id: '12',
-          name: 'Item 12',
-          items: []
+          id: '/tags/2/domains',
+          name: 'Tag 2',
+          icon: <TagIcon />
+        },
+        {
+          id: '/tags/3/domains',
+          name: 'Tag 3',
+          icon: <TagIcon />
         }
-      ]
+      ],
+      icon: <DnsIcon />
     },
     {
-      id: '2',
-      name: 'Item 2',
+      id: '/tags',
+      name: 'Tags',
+      icon: <TagsIcon />
+    },
+    {
+      id: '/users',
+      name: 'Users',
+      icon: <UserIcon />
+    },
+    {
+      id: '/settings',
+      name: 'Settings',
+      selectable: false,
+      icon: <SettingsIcon />,
+      divider: 'top',
       items: [
         {
-          id: '21',
-          name: 'item 21',
-          items: []
+          id: '/settings/templates',
+          name: 'Templates',
+          icon: <TemplateIcon />
+        },
+        {
+          id: '/settings/api-key',
+          name: 'API Key',
+          icon: <LockOpenIcon />
+        },
+        {
+          id: '/settings/remove-account',
+          name: 'Logout',
+          icon: <RemoveAccountIcon color="secondary" />
         }
       ]
-    },
-    {
-      id: '3',
-      name: 'Item 3',
-      items: []
     }
   ]
   const [selectedId, setSelectedId] = React.useState<React.ReactText>('2')
