@@ -26,6 +26,6 @@ git clone https://github.com/gchumillas/tree
 cd tree
 yarn
 
-# and run the demo
+# and run the demo (it takes a while, be patient)
 yarn demo
 ```
