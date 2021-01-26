@@ -2,7 +2,7 @@
   "name": "@plastic-ui/tree",
   "description": "Collapsible Tree",
   "license": "GPL-3.0-or-later",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Gonzalo Chumillas",
   "main": "dist/index",
   "types": "dist/index",
@@ -16,7 +16,7 @@
   "scripts": {
     "lint": "tsc --noEmit && eslint 'src/**/*.{ts,tsx}'",
     "build": "rimraf ./dist && tsc -p tsconfig.build.json",
-    "prepublish": "yarn run build"
+    "prepare": "yarn run build"
   },
   "peerDependencies": {
     "@material-ui/core": "~4.11.2",
