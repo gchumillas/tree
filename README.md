@@ -4,7 +4,7 @@ A Collapsible Tree component.
 
 ## Install
 
-This component requires [React](https://reactjs.org/) and [Material-UI](https://material-ui.com/). Make sure those libraries have already been installed. Then execute the following command:
+This component requires [React](https://www.npmjs.com/package/react), [@material-ui/core](https://www.npmjs.com/package/@material-ui/core) and [@material-ui/icons](https://www.npmjs.com/package/@material-ui/icons). Make sure those libraries have already been installed. Then execute the following command:
 
 ```bash
 npm install @plastic-ui/tree
