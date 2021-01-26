@@ -15,7 +15,8 @@
   ],
   "scripts": {
     "lint": "tsc --noEmit && eslint 'src/**/*.{ts,tsx}'",
-    "build": "rimraf ./dist && tsc -p tsconfig.build.json"
+    "build": "rimraf ./dist && tsc -p tsconfig.build.json",
+    "prepublish": "yarn run build"
   },
   "peerDependencies": {
     "@material-ui/core": "~4.11.2",
