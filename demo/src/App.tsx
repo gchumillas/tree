@@ -6,10 +6,8 @@ import {
   Settings as SettingsIcon,
   Subject as TemplateIcon,
   LockOpen as LockOpenIcon,
-  PowerSettingsNew as RemoveAccountIcon,
-  LocalOffer as TagIcon
+  PowerSettingsNew as RemoveAccountIcon
 } from '@material-ui/icons'
-import { TagsIcon } from './icons'
 import { Tree, TreeItem } from '@plastic-ui/tree'
 
 export default () => {
@@ -20,26 +18,22 @@ export default () => {
       items: [
         {
           id: '/tags/1/domains',
-          name: 'Tag 1',
-          icon: <TagIcon />
+          name: 'Tag 1'
         },
         {
           id: '/tags/2/domains',
-          name: 'Tag 2',
-          icon: <TagIcon />
+          name: 'Tag 2'
         },
         {
           id: '/tags/3/domains',
-          name: 'Tag 3',
-          icon: <TagIcon />
+          name: 'Tag 3'
         }
       ],
       icon: <DnsIcon />
     },
     {
       id: '/tags',
-      name: 'Tags',
-      icon: <TagsIcon />
+      name: 'Tags'
     },
     {
       id: '/users',
@@ -64,14 +58,15 @@ export default () => {
           icon: <LockOpenIcon />
         },
         {
-          id: '/settings/remove-account',
+          id: '/settings/logout',
           name: 'Logout',
           icon: <RemoveAccountIcon color="secondary" />
         }
       ]
     }
   ]
-  const [selectedId, setSelectedId] = React.useState<React.ReactText>('2')
+
+  const [selectedId, setSelectedId] = React.useState<React.ReactText>()
 
   return (
     <>
