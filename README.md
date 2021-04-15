@@ -16,7 +16,7 @@ yarn add @plastic-ui/tree
 
 ## Example
 
-You'll find a complete example [here](https://github.com/gchumillas/tree/blob/main/demo/src/App.tsx).
+You'll find a complete example [HERE](https://github.com/gchumillas/tree/blob/main/demo/src/App.tsx).
 
 ## Demo
 
