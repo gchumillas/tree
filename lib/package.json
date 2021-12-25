@@ -2,7 +2,7 @@
   "name": "@plastic-ui/tree",
   "description": "Collapsible Tree",
   "license": "GPL-3.0-or-later",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "author": "Gonzalo Chumillas",
   "repository": "github:gchumillas/tree",
   "main": "dist/index",
