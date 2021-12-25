@@ -33,7 +33,7 @@ import {
 import { FolderOpenIcon, FileIcon } from './icons'
 import context from './context'
 import { TreeItem } from './Tree'
-import TreeItems from './TreeList'
+import TreeList from './TreeList'
 
 type TreeEntryProps = {
   item: TreeItem
@@ -82,7 +82,7 @@ export const TreeEntry = ({ item, level }: TreeEntryProps) => {
         )}
       </ListItem>
       <Collapse in={open} timeout="auto" unmountOnExit>
-        {items.length > 0 && <TreeItems items={items} level={level + 1} />}
+        {items.length > 0 && <TreeList items={items} level={level + 1} />}
       </Collapse>
       {item.divider == 'bottom' && <Divider />}
     </>

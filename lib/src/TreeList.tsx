@@ -1,4 +1,4 @@
-// TreeItems component.
+// TreeList component.
 //
 // Copyright (C) 2020 Clovrlabs SL
 //
