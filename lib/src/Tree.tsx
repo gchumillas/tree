@@ -36,19 +36,19 @@ export type TreeProps = {
 }
 
 export const Tree = ({ items, selectedItemId, onSelectItem }: TreeProps) => {
-  const isItemOpen = (item: TreeItem): boolean => {
+  const isItemOpen = React.useCallback((item: TreeItem): boolean => {
     const items = item?.items || []
     return selectedItemId == item.id || items.some(item => isItemOpen(item))
-  }
+  }, [selectedItemId])
+
+  const contextProps = React.useMemo(() => ({
+    selectedItemId,
+    isItemOpen,
+    onSelectItem
+  }), [selectedItemId, isItemOpen, onSelectItem])
 
   return (
-    <context.Provider
-      value={{
-        selectedItemId,
-        isItemOpen,
-        onSelectItem
-      }}
-    >
+    <context.Provider value={contextProps}>
       <TreeList items={items} />
     </context.Provider>
   )
